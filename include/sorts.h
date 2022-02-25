@@ -1,13 +1,19 @@
+#ifndef SORTS_H
+#define SORTS_H
+
 #include <vector>
 #include <iostream>
- 
-void bubble_sort(std::vector<int>* arr);
-void selection_sort(std::vector<int>* arr);
+#include "selection_sort.h"
+#include "bubble_sort.h"
+#include "insertion_sort.h"
 
-void printList(std::vector<int>* arr) {
+template <typename T>
+void print_list(std::vector<T>* arr) {
     std::cout << std::endl;
-    for (std::vector<int>::size_type i = 0; i < arr->size(); ++i) {
+    for (typename std::vector<T>::size_type i = 0; i < arr->size(); ++i) {
         std::cout << arr->at(i) << std::endl;
     }
     std::cout << std::endl;
 }
+
+#endif
